@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, ViewChild, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, OnInit } from '@angular/core';
 import domtoimage from 'dom-to-image';
 
 @Component({
@@ -13,9 +13,9 @@ export class BlockComponentComponent implements OnInit {
 
   @ViewChild('container', { static: true }) container; 
 
-  imageSrc = null;
-
   gridBy = 6;
+
+  @Input('json')
   grid: ISquare[] = [];
 
   model = {

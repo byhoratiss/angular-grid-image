@@ -4,6 +4,7 @@
   width: 200px;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .square {
@@ -33,4 +34,9 @@
   grid-gap: 0;
   grid-template-rows: 14% 14% 14% 14% 14% 15% 15%;
   grid-template-columns: 14% 14% 14% 14% 14% 15% 15%;
+  position: absolute;
+  z-index: 5;
+}
+.copy {
+  z-index: 1;
 }
