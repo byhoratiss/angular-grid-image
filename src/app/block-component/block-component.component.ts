@@ -18,13 +18,6 @@ export class BlockComponentComponent implements OnInit {
   @Input('json')
   grid: ISquare[] = [];
 
-  model = {
-    s1: 'Bialet Masse',
-    s2: 'Rodriguez',
-    s3: 'Pueyrredón',
-    s4: 'Uruguay'
-  };
-
   constructor() {
 
     this.grid = new Array();
