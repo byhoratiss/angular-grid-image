@@ -1,0 +1,29 @@
+
+
+<div class="container">
+
+  <hello name="{{ name }}"></hello>
+  <p>
+    PoC of marking squares within a Grid to draw a "Building Block".
+  </p>
+
+  <app-block-component 
+    (asImage)="gridAsImage = $event"
+    (asJson)="gridValue = $event">
+  </app-block-component>
+
+  <br/>
+
+  <div class="row">
+    <div class="col-6">
+      <h4>Grid as JSON</h4>
+      <code>
+        {{ gridValue | json }}
+      </code>
+    </div>
+    <div class="col-6">
+      <h4>Grid as Image</h4>
+      <img *ngIf="gridAsImage" [src]="gridAsImage">
+    </div>
+  </div>
+</div>

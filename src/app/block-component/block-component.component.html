@@ -1,0 +1,9 @@
+
+<div class="draw-container">
+  <div #container class="grid-container">
+    <div *ngFor="let g of grid" class="square" 
+      [class.marked]="g.m"
+      (click)="mark(g)">
+    </div>
+  </div>
+</div>
